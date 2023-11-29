@@ -16,6 +16,12 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next)
     {
+        if($request-> age >=18){
+            echo"Keni te drejt per te votuar !";
+        }else{
+            echo"Nuk keni te drejt per te votuar!";
+        }
+
         return $next($request);
     }
 }
